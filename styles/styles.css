@@ -1,0 +1,103 @@
+/* Generic */
+* {
+    box-sizing: border-box;
+    color: #161616;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 8vw;
+}
+
+div + div,
+li + li {
+    margin-top: 2vw;
+}
+
+
+/* List */
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+/* Form */
+label {
+    display: inline-block;
+    text-align: right;
+    width: 102px;
+}
+
+input {
+    border-top: none;
+    border-right: none;
+    border-bottom: solid 1px black;
+    border-left: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 300;
+    margin-left: 5px;
+    width: 25vw;
+}
+
+input.error {
+    border-bottom: solid 1px red;
+}
+
+/* Button */
+.btn {
+    background-color: white;
+    border: solid 2px #161616;
+    color: #161616;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 6vw;
+    outline: none;
+    padding: 10px 25px;
+    text-decoration: none;
+    transition: color .3s ease, background-color .3s ease;
+    width: fit-content;
+}
+
+.btn:hover {
+    background-color: #161616;
+    color: white;
+}
+
+
+/* Arrow */
+.arrow {
+    display: flex;
+    font-size: 14px;
+    margin-top: 4vw;
+    padding-left: 20px;
+    position: relative;
+    text-decoration: none;
+    width: fit-content;
+}
+
+
+
+.arrow::before {
+    content: "";
+	border-right: solid 2px black;
+    border-top: solid 2px black;
+    height: 7px;
+	left: 0;
+	position: absolute;
+	top: 50%;
+    transition: transform .3s ease;
+    transform: translate(0, -50%) rotate(-135deg);
+	width: 7px;
+}
+
+.arrow:hover::before {
+    transform: translate(-15px, -50%) rotate(-135deg);
+}
